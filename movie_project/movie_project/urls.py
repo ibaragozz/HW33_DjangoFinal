@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
+from films import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('films/', include('films.urls')),
-    path('', lambda request: redirect('film_list')),
+    path('', views.home, name='home'),  # Главная страница
+    path('films/', include('films.urls')),  # Включаем маршруты из приложения films
 ]
+
+
 
