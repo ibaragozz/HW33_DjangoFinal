@@ -1,4 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}  {# Эта строка должна быть первой #}
+
+{% load widget_tweaks %}  {# Теперь загружаем виджеты после extends #}
 
 {% block title %}Add Film{% endblock %}
 
