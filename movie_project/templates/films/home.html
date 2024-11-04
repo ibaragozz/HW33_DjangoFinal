@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center my-4">
+        <h1>Welcome to the Movie Project!</h1>
+        <p class="lead">Your place to add and review movies.</p>
+        <a href="{% url 'add_film' %}" class="btn btn-primary btn-lg">Add a New Review</a>
+    </div>
+    <a href="{% url 'film_list' %}" class="btn btn-secondary">Go to film list</a>
+{% endblock %}

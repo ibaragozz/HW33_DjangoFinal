@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Film List{% endblock %}
+
+{% block content %}
+    <h1 class="my-4">Films</h1>
+    <a href="{% url 'add_film' %}" class="btn btn-success mb-4">Add a New Review</a>
+    <ul class="list-group">
+        {% for film in films %}
+        <li class="list-group-item">
+            <h2>{{ film.title }}</h2>
+            <p>{{ film.description }}</p>
+            <p><strong>Review:</strong> {{ film.review }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
